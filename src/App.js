@@ -17,6 +17,8 @@ function App() {
         >
           Learn React
         </a>
+        <h1>Ayan Dasgupta</h1>
+        <div id="container"></div>
       </header>
     </div>
   );

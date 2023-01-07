@@ -26,9 +26,36 @@
     -->
     <title>React App</title>
   </head>
+  <script src="https://unpkg.com/imagekit-media-library-widget/dist/imagekit-media-library-widget.min.js"></script>
+  <script>
+    // configuration options
+    const config = {
+      container: '#container',   // the element in which the widget will be rendered
+      className: 'media-library-widget',
+      dimensions: {
+        height: '100%',
+        width: '100%',
+      },
+      view: 'modal',  // modal | inline
+      renderOpenButton: true  // false | true (default)
+    };
+    
+    // define callback handler  
+    function callback (payload) {
+      // this is the callback handler
+      // … consume json payload …
+      console.log('Image data:', payload.data);
+    }
+    
+    // instantiate the plugin
+    const mediaLibraryWidget = new IKMediaLibraryWidget(config, callback);
+    </script>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      
+    </div>
+    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
